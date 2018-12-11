@@ -1,0 +1,467 @@
+/***************************************************
+// Reset
+***************************************************/
+
+/* border-box makes everything easy */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,input,select,textarea,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,nav,section,main{
+	box-sizing: border-box;
+}
+
+/* Better behavior for lists */
+ul,ol{
+	list-style-position: outside;
+	margin-left: 1.4rem;
+	padding-left: 0;
+}
+
+/* Keep images and videos from overspilling their bounds */
+img, video{
+	display: block;
+	max-width :100%;
+	height: auto;
+}
+
+/* Make hr just a simple line */
+hr{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1rem 0;
+	padding: 0;
+}
+
+/* Reduce quirky behavior for tables */
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Make input text line up with other text */
+input,select{
+	vertical-align: middle;
+}
+
+/* Kill default borders on fieldsets */
+fieldset{
+	border: none;
+}
+
+/* It's rare to want an inline textarea */
+textarea{
+	display: block;
+}
+
+/* Make sub and sup text line up better */
+sub,sup{
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup{
+	top: -0.5rem;
+}
+sub{
+	bottom: -0.25rem;
+}
+
+:root {
+	--font-primary: 'Montserrat', sans-serif;
+	--font-logo: 'Shrikhand', cursive;
+	--font-heading: 'Ruda', sans-serif;;
+	--heading-one: 2.986rem;
+	--heading-two: 2.488rem;
+	--heading-three: 2.074em;
+	--heading-four: 1.728rem;
+	--heading-five: 1.44rem;
+	--heading-six: 1.2rem;
+
+	--color-primary-green: #057360;
+	--color-accent-gold: #FFC300;
+	--color-accent-dark: #732874;
+	--color-text: #6F7372;
+}
+
+html {
+	font-family: var(--font-primary);
+	color: var(--color-primary);
+}
+h1 {
+	color: var(--color-accent-dark);
+	font-family: var(--font-logo);
+	font-size: var(--heading-one);
+}
+
+h1, h2, h3 {
+	font-weight: bolder;
+	font-family: var(--font-heading);
+} 
+
+h1 {
+	font-size: var(--heading-one);
+	line-height: 4rem;
+	margin: 2rem 0 2rem;
+}
+
+h2 {
+	font-size: var(--heading-two);
+	line-height: 4rem;
+}
+
+h3 {
+	font-size: var(--heading-three);
+	margin-top: 1rem;
+}
+
+h4 {
+	font-size: var(--heading-four);
+	font-family: var(--font-heading);
+}
+
+h5 {
+	font-size: var(--heading-five);
+	font-family: var(--font-heading);
+}
+
+h6 {
+	font-size: var(--heading-six);
+	font-family: var(--font-heading);
+	margin-bottom: 1rem;
+}
+
+.logo-name {
+	font-family: var(--font-logo);
+}
+
+
+body {
+	display: block;
+	margin: 8px;
+}
+
+
+
+.selfie {
+	border-radius: 50%;
+	max-width: 15rem;
+	margin: auto;
+
+}
+
+.wrapper {
+  margin-right: auto; 
+  margin-left:  auto; 
+  max-width: 35rem; 
+  padding-right: .625rem; 
+  padding-left: .625rem; 
+}
+
+.index-nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+.index-nav li {
+	display: inline-block;
+}
+
+.index-nav a {
+	display: inline-block;
+}
+
+.index-nav a:hover {
+	background-color: rgba(256,256,256, .5)
+}
+/*************************************************************/
+/* NAVIGATION                                                 /
+/*************************************************************/
+
+
+.site-nav ul {
+	padding-left: 0;
+
+}
+
+.site-nav a, .secondary-nav a {
+	display: inline-block;
+	padding: .5rem 0;
+	text-decoration: none;
+	color: var(--color-primary-green);
+
+}
+
+.site-nav a:hover {
+	color: var(--color-accent-dark);
+	transition: all .4s ease-in;
+}
+
+.site-nav .current-page {
+	text-decoration: underline;
+}
+
+
+@media(min-width: 600px) {
+
+	.site-nav {
+		border-top: 1px solid var(--color-text);
+
+	}
+
+	.site-nav li {
+		display: inline-block;
+		margin-right: .5rem;	
+	}
+}
+
+.secondary-nav {
+	background-color: var(--color-accent-gold);
+	padding: .8rem .3rem;
+}
+
+.secondary-nav ul ul li:before {
+	content: "-";
+}
+
+.secondary-nav li {
+	list-style-image: none;
+	list-style: none;
+
+}
+
+.secondary-nav a {
+	text-decoration: none;
+}
+
+.secondary-nav a:hover {
+	color: var(--color-accent-dark);
+	transition: all .4s ease-in;
+}
+
+/************************/
+/* typography            /
+/************************/
+
+.tag-line {
+	font-size: var(--heading-four);
+	margin: 0 1rem 2rem;
+}
+
+.logo-name {
+	margin: 1rem 1rem 0;
+}
+
+.employment {
+	color: var(--color-primary-green)
+}
+
+ul {
+	list-style-image: url(bv_spacer.gif);
+}
+/*************************************************************/
+/* RESPONSIVE DESIGN                                          /
+/*************************************************************/
+
+:root {
+	
+	--modular-ratio: 1.7;
+	
+	--size-med: calc( 1rem * var(--modular-ratio) );
+	--size-large: calc( var(--size-med) * var(--modular-ratio) );
+	
+}
+
+@media( min-width: 600px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media( min-width: 900px) {
+	
+	:root {
+		--modular-ratio: 1.8;
+	}
+	
+}
+/*************************************************************/
+/* FORM     		                                          /
+/*************************************************************/
+
+
+input[type="text"], input[type="email"], textarea, select {
+	display: block;
+	margin-bottom: 1rem;
+	padding: .5rem;
+	width: 90%;
+}
+
+select {
+	background-color: #aaaebc;
+	height: 2rem; 
+}
+
+textarea {
+	min-height: 5rem;
+}
+
+input:focus {
+	border-color: var(--color-primary-green);
+	border-style: solid;
+	outline: none;
+}
+
+input[type="submit"], button {
+	border-radius: .1rem;
+	color: var(--color-text);
+	padding: 1rem 1rem;
+	margin-bottom: 1rem;
+	transition: all .3s ease-in;
+	cursor: pointer;
+	background-color: var(--color-primary-green);
+	box-shadow: 4px 4px blur var(--color-text);
+}
+
+label {
+	display: block;
+}
+
+.error {
+	border: 2px solid var(--color-accent-dark);
+} 
+
+.contact {
+	margin: 2rem;
+}
+
+/* BUTTONS */
+
+.hero-button {
+	border-radius: .1rem;
+	color: white;
+	padding: 1rem 1rem;
+	transition: all .3s ease-in;
+	cursor: pointer;
+	background-color: var(--);
+	box-shadow: 4px 4px blur var();
+	text-decoration: none;
+}
+
+.button-link {
+	border-radius: .1rem;
+	display: inline-block;
+	color: white;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	transition: all .3s ease-in;
+	background-color: var(--color-primary-green);
+	box-shadow: 4px 4px blur var(--color-text);
+}
+
+/* BODY */
+
+body {
+	background-color: var(--color-accent-gold);
+	background-image: url(images/homepage.png);
+	background-size: cover;
+
+}
+
+ul li {
+	margin-left: 1rem;
+}
+
+
+/*************************************************************/
+/* PORTFOLIO PROJECT CARDS *								  /
+/*************************************************************/
+
+.card-images {
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-primary);
+  background-color: rgba(256,256,256, .65);
+
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: var(--color-text);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--color-text-dark);
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.article {
+	font-size: .9rem;
+}
+
+.form-control {
+	margin: .5px;
+}
+
+@media (min-width: 800px) {
+	.card-container {
+		display: grid;
+		grid-template-columns: 300px 300px;
+		grid-gap: 1rem;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1150px) {
+	.card-container {
+		grid-template-columns: 300px 300px 300px;
+	}
+}
+
+.project-page img {
+	max-width: 17rem;
+	margin: 1rem auto;
+}
+/*************************************************************/
+/* RESUME PAGE *        									  /
+/*************************************************************/
+
+.resume h2{
+	color: var(--color-accent-dark);
+}
+
+/*************************************************************/
+/* FOOTER* 		        									  /
+/*************************************************************/
+
+.site-footer {
+	margin: 2rem;
+	border-top: 1px solid var(--color-text);
+}
+
+.site-footer p {
+	margin: 2rem;
+}
